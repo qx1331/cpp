@@ -4,7 +4,7 @@
 
 using namespace std;
 
-// Функція для виводу матриці на екран
+// Функція для виводу матриці
 void printMatrix(int **matrix, int N, int M) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
@@ -14,7 +14,7 @@ void printMatrix(int **matrix, int N, int M) {
     }
 }
 
-// Функція для виділення пам'яті під матрицю та заповнення її елементами
+// виділення пам'яті для матриці
 int** createAndFillMatrix(int N, int M) {
     int** matrix = new int*[N];
     for (int i = 0; i < N; i++) {
@@ -27,7 +27,7 @@ int** createAndFillMatrix(int N, int M) {
     return matrix;
 }
 
-// Функція для звільнення пам'яті, виділеної для матриці
+// звільнення пам'яті
 void deleteMatrix(int** matrix, int N) {
     for (int i = 0; i < N; i++) {
         delete[] matrix[i];
@@ -35,7 +35,7 @@ void deleteMatrix(int** matrix, int N) {
     delete[] matrix;
 }
 
-// Функція для порівняння рядків за першими елементами
+
 bool compareRows(const int* row1, const int* row2) {
     return row1[0] < row2[0];
 }
